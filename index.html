@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio pessoal de Ivamaroque — Desenvolvedor de Software apaixonado por tecnologia, com projetos no GitHub e experiência em desenvolvimento." />
+  <meta name="keywords" content="portfólio, desenvolvedor, software, GitHub, LinkedIn, programação, tecnologia" />
+  <meta property="og:title" content="Ivamaroque | Portfólio" />
+  <meta property="og:description" content="Portfólio pessoal com projetos no GitHub e informações profissionais." />
+  <meta property="og:type" content="website" />
+  <title>Ivamaroque | Portfólio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated Particles Background -->
+  <div id="particles" aria-hidden="true"></div>
+
+  <!-- ===== Navigation ===== -->
+  <nav aria-label="Navegação principal">
+    <a href="#hero" class="nav-logo" aria-label="Início">IR</a>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#experience">Experiência</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="hero" aria-label="Apresentação">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>Disponível para oportunidades</span>
+      </div>
+
+      <p class="hero-greeting">Olá, mundo! 👋 Eu sou</p>
+      <h1 class="hero-name">Ivamaroque</h1>
+
+      <p class="hero-title">
+        <span class="typed-text" id="typed"></span><span class="cursor" aria-hidden="true"></span>
+      </p>
+
+      <p class="hero-description">
+        Apaixonado por tecnologia e desenvolvimento de software. Transformo ideias em código,
+        construindo soluções que fazem a diferença. Sempre aprendendo, sempre evoluindo. 🚀
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          Ver Projetos
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          ✉️ Entre em Contato
+        </a>
+      </div>
+
+      <div class="hero-social" role="list" aria-label="Links sociais">
+        <a href="https://github.com/Ivamaroque" target="_blank" rel="noopener noreferrer"
+           class="social-link" title="GitHub" role="listitem">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/ivamaroque" target="_blank" rel="noopener noreferrer"
+           class="social-link" title="LinkedIn" role="listitem">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-label="LinkedIn">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="#contact" class="social-link" title="Contato" role="listitem">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Contato">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Rolar</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" aria-label="Sobre mim">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Sobre Mim</span>
+        <h2 class="section-title">Quem sou <span>eu?</span></h2>
+        <p class="section-subtitle">
+          Conheça um pouco mais sobre minha jornada e paixões na tecnologia
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <div class="about-image-bg" aria-hidden="true"></div>
+          <div class="about-avatar-placeholder">
+            <span class="avatar-initials">IR</span>
+          </div>
+          <div class="about-stats" aria-label="Estatísticas">
+            <div class="stat-card">
+              <div class="stat-number" id="repoCount">—</div>
+              <div class="stat-label">Repositórios</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="starsCount">—</div>
+              <div class="stat-label">Stars</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-delay-2">
+          <p class="about-text">
+            Sou um desenvolvedor de software apaixonado por criar soluções inovadoras e funcionais.
+            Minha jornada na tecnologia começou com a curiosidade sobre como as coisas funcionam por
+            baixo dos panos, e desde então não parei de aprender e crescer.
+          </p>
+          <p class="about-text">
+            Acredito no poder do código para transformar ideias em realidade. Trabalho com diversas
+            tecnologias e estou sempre buscando me atualizar com as melhores práticas do mercado.
+            Adoro colaborar com equipes e contribuir para projetos que geram impacto real.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">📍 Localização</span>
+              <span class="info-value">Brasil</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">💼 Status</span>
+              <span class="info-value">Disponível</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">🎓 Formação</span>
+              <span class="info-value">Tecnologia da Informação</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">🌐 LinkedIn</span>
+              <span class="info-value">
+                <a href="https://linkedin.com/in/ivamaroque" target="_blank" rel="noopener"
+                   style="color: var(--primary); text-decoration: none;">ivamaroque</a>
+              </span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://github.com/Ivamaroque" target="_blank" rel="noopener" class="btn btn-primary">
+              Ver GitHub
+            </a>
+            <a href="https://linkedin.com/in/ivamaroque" target="_blank" rel="noopener" class="btn btn-outline">
+              Ver LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" aria-label="Habilidades">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Habilidades</span>
+        <h2 class="section-title">O que eu <span>sei fazer?</span></h2>
+        <p class="section-subtitle">
+          Tecnologias e ferramentas que utilizo no dia a dia para construir soluções incríveis
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <span class="skill-category-icon">💻</span>
+          <h3 class="skill-category-title">Linguagens</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <span class="skill-category-icon">⚛️</span>
+          <h3 class="skill-category-title">Frameworks & Bibliotecas</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">Express.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <span class="skill-category-icon">🗄️</span>
+          <h3 class="skill-category-title">Banco de Dados</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">SQLite</span>
+            <span class="skill-tag">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <span class="skill-category-icon">🛠️</span>
+          <h3 class="skill-category-title">Ferramentas & DevOps</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects" aria-label="Projetos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Projetos</span>
+        <h2 class="section-title">Meus <span>Projetos</span></h2>
+        <p class="section-subtitle">
+          Confira os repositórios públicos do meu GitHub — cada projeto é uma história de aprendizado
+        </p>
+      </div>
+
+      <div class="projects-filter" id="filterButtons" aria-label="Filtrar por linguagem">
+        <!-- Filter buttons generated by JS -->
+      </div>
+
+      <div class="projects-grid" id="projectsGrid" aria-label="Lista de projetos">
+        <div class="projects-loading">
+          <div class="spinner" aria-hidden="true"></div>
+          <p>Carregando projetos do GitHub...</p>
+        </div>
+      </div>
+
+      <div class="show-more-wrapper">
+        <button class="btn btn-outline" id="showMoreBtn" style="display:none" aria-label="Ver mais projetos">
+          Ver mais projetos
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experience Section ===== -->
+  <section id="experience" aria-label="Experiência">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Experiência</span>
+        <h2 class="section-title">Minha <span>Jornada</span></h2>
+        <p class="section-subtitle">
+          Formação acadêmica e experiências profissionais que moldaram minha trajetória
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024 — Presente</div>
+            <h3 class="timeline-title">Desenvolvedor de Software</h3>
+            <div class="timeline-company">Projetos Pessoais & Open Source</div>
+            <p class="timeline-desc">
+              Desenvolvimento de aplicações web e mobile, contribuição com projetos open source
+              e construção de um portfólio robusto com diversas tecnologias.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2022 — 2024</div>
+            <h3 class="timeline-title">Estudante de Tecnologia</h3>
+            <div class="timeline-company">Instituição de Ensino Superior</div>
+            <p class="timeline-desc">
+              Cursando Tecnologia da Informação com foco em desenvolvimento de software,
+              estruturas de dados, algoritmos e engenharia de sistemas.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2021</div>
+            <h3 class="timeline-title">Início na Programação</h3>
+            <div class="timeline-company">Autodidata</div>
+            <p class="timeline-desc">
+              Primeiros passos no mundo do desenvolvimento, aprendendo lógica de programação,
+              HTML, CSS, JavaScript e Python através de cursos e projetos práticos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" aria-label="Contato">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Contato</span>
+        <h2 class="section-title">Vamos <span>conversar?</span></h2>
+        <p class="section-subtitle">
+          Estou disponível para projetos, colaborações e novas oportunidades. Entre em contato!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-text">
+            Seja para uma oportunidade de trabalho, colaboração em projeto ou apenas um papo
+            sobre tecnologia, fico feliz em ouvir. Responderei o mais rápido possível! 😊
+          </p>
+
+          <div class="contact-items">
+            <a href="https://linkedin.com/in/ivamaroque" target="_blank" rel="noopener"
+               class="contact-item" aria-label="LinkedIn de Ivamaroque">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-item-label">LinkedIn</div>
+                <div class="contact-item-text">linkedin.com/in/ivamaroque</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/Ivamaroque" target="_blank" rel="noopener"
+               class="contact-item" aria-label="GitHub de Ivamaroque">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-item-label">GitHub</div>
+                <div class="contact-item-text">github.com/Ivamaroque</div>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/ivamaroque" target="_blank" rel="noopener"
+               class="contact-item" aria-label="Enviar mensagem via LinkedIn">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Mensagem Direta</div>
+                <div class="contact-item-text">Enviar mensagem via LinkedIn</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reveal reveal-delay-2">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Formulário de contato">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="formName">Nome</label>
+                <input type="text" id="formName" name="name" class="form-input"
+                       placeholder="Seu nome" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formEmail">Email</label>
+                <input type="email" id="formEmail" name="email" class="form-input"
+                       placeholder="seu@email.com" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formSubject">Assunto</label>
+              <input type="text" id="formSubject" name="subject" class="form-input"
+                     placeholder="Como posso ajudar?" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formMessage">Mensagem</label>
+              <textarea id="formMessage" name="message" class="form-textarea"
+                        placeholder="Escreva sua mensagem aqui..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              ✉️ Enviar Mensagem
+            </button>
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <a href="#hero" class="footer-logo">IR</a>
+
+      <ul class="footer-links" role="list">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#experience">Experiência</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+
+      <div class="footer-social" aria-label="Links sociais">
+        <a href="https://github.com/Ivamaroque" target="_blank" rel="noopener" class="social-link" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/ivamaroque" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-label="LinkedIn">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+      </div>
+
+      <p class="footer-copy">
+        © <span id="currentYear"></span> Ivamaroque. Feito com <span aria-label="amor">❤️</span> e muito café ☕
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
