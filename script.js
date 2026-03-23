@@ -17,8 +17,8 @@ const CONFIG = {
 // ===========================
 const typedStrings = [
   'Desenvolvedor de Software',
-  'Estudante de TI',
-  'Apaixonado por Tecnologia',
+  'Engenheiro de Computação',
+  'Senso de Liderança',
   'Criador de Soluções',
 ];
 
