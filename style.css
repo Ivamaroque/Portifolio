@@ -664,6 +664,55 @@ section {
   background: rgba(255, 255, 255, 0.01);
 }
 
+/* ===========================
+   UI/UX Section
+=========================== */
+#uiux {
+  background: var(--bg-card);
+}
+
+.uiux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.uiux-card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: all var(--transition);
+}
+
+.uiux-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.uiux-icon {
+  font-size: 1.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.uiux-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.uiux-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.uiux-cta {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .projects-filter {
   display: flex;
   justify-content: center;
@@ -1292,6 +1341,10 @@ footer {
   }
 
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uiux-grid {
     grid-template-columns: 1fr;
   }
 
