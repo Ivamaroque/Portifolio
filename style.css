@@ -98,8 +98,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   background: rgba(10, 10, 26, 0.85);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   transition: all var(--transition);
 }
@@ -118,6 +118,37 @@ nav.scrolled {
   background-clip: text;
   text-decoration: none;
   letter-spacing: -0.5px;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.language-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.language-btn:hover,
+.language-btn.active {
+  color: var(--text-primary);
+  background: var(--gradient);
 }
 
 .nav-links {
@@ -174,6 +205,17 @@ nav.scrolled {
   background: var(--text-primary);
   border-radius: 2px;
   transition: all var(--transition);
+}
+
+.text-link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.about-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* ===========================
@@ -822,6 +864,7 @@ section {
   flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -893,9 +936,18 @@ section {
   color: var(--text-muted);
 }
 
+.projects-empty-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .show-more-wrapper {
   text-align: center;
   margin-top: 3rem;
+}
+
+.show-more-hidden {
+  display: none;
 }
 
 /* ===========================
@@ -1214,6 +1266,10 @@ footer {
   color: var(--secondary);
 }
 
+.footer-copy [aria-label] {
+  color: inherit;
+}
+
 /* ===========================
    Animations & Intersection Observer
 =========================== */
@@ -1262,6 +1318,11 @@ footer {
     padding: 1rem;
   }
 
+  .language-switcher {
+    margin-left: auto;
+    margin-right: 0.75rem;
+  }
+
   .nav-links {
     display: none;
     position: fixed;
@@ -1269,6 +1330,7 @@ footer {
     left: 0;
     right: 0;
     background: rgba(10, 10, 26, 0.98);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: center;
@@ -1293,6 +1355,10 @@ footer {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .about-actions {
+    justify-content: center;
   }
 
   .about-grid {
@@ -1357,6 +1423,14 @@ footer {
   .hero-cta {
     flex-direction: column;
     align-items: center;
+  }
+
+  .language-switcher {
+    gap: 0.2rem;
+  }
+
+  .language-btn {
+    padding: 0.3rem 0.55rem;
   }
 
   .about-stats {
