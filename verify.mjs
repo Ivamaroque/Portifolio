@@ -55,7 +55,7 @@ try {
   await send("Runtime.enable");
   for (const width of widths) {
     await send("Emulation.setDeviceMetricsOverride", { width, height: 900, deviceScaleFactor: 1, mobile: width < 768 });
-    await send("Page.navigate", { url: pathToFileURL(resolve("portfolio.html")).href });
+    await send("Page.navigate", { url: pathToFileURL(resolve("index.html")).href });
     let ready = false;
     for (let attempt = 0; attempt < 80; attempt += 1) {
       const state = await send("Runtime.evaluate", {
